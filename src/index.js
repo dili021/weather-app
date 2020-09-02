@@ -1,16 +1,15 @@
 import './style.scss';
+import { appendForm } from './elements';
 import getWeatherData from './fetch';
-import fetchForm from './fetch-form';
 
-const formNode = document.createElement('div');
-formNode.innerHTML = fetchForm();
-const container = document.querySelector('.app');
-container.appendChild(formNode);
+
+appendForm();
 
 const form = document.querySelector('form');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   const city = form.city.value;
-  const units = form.units.value;
+  const units = form.units.value || 'metric';
   getWeatherData(city, units);
 });
+getWeatherData('Novi Sad', 'metric');
