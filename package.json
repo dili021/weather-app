@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -17,11 +18,21 @@
   },
   "homepage": "https://github.com/dili021/weather-app#readme",
   "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^4.2.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
     "file-loader": "^6.1.0",
     "html-loader": "^1.3.0",
+    "html-webpack-plugin": "^4.4.1",
     "sass": "^1.26.10",
     "sass-loader": "^10.0.1",
+    "style-loader": "^1.2.1",
+    "stylelint": "^13.3.3",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-csstree-validator": "^1.8.0",
+    "stylelint-scss": "^3.17.2",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   }
